@@ -15,8 +15,6 @@ dependencies:
       - seaborn
       - plotnine
       - pre-commit
-      - flask
-      - gunicorn
-      - requests
-      - flask-cors
+      - streamlit
+      - plotly
 prefix: /opt/conda
