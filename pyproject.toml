@@ -1,4 +1,65 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["flit"]
+build-backend = "flit.buildapi"
 
+[project]
+name = "biosnicar"
+authors = [{ name = "XXX", email = "YYYY" }]
+description = "Snow and ice albedo modelling"
+readme = "README.md"
+requires-python = ">=3.8.1"
+dynamic = ["version"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Physics",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "python-dotenv",
+    "streamlit",
+    "pandas",
+    "dask[complete]",
+    "matplotlib",
+    "miepython",
+    "netCDF4",
+    "scipy",
+    "seaborn",
+    "xarray",
+    "plotnine",
+    "statsmodels",
+
+    "tqdm",
+    "pyyaml",
+    "plotly",
+]
+
+[project.optional-dependencies]
+test = [
+    "bandit[toml]",
+    "ruff",
+    "pylint",
+    "pylint_junit",
+    "pytest-cov=",
+    "pytest",
+    "pytest-check",
+    "coverage-badge",
+    "pytest-github-actions-annotate-failures",
+    "shellcheck-py",
+    "scipy",
+    "mypy",
+]
+dev = ["bump2version"]
+
+[project.urls]
+Documentation = "https://github.com/jmcook1186/biosnicar-py"
+Source = "https://github.com/jmcook1186/biosnicar-py"
+Tracker = "https://github.com/jmcook1186/biosnicar-py/issues"
