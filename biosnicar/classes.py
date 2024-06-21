@@ -58,6 +58,8 @@ class Impurity:
 
         if coated:
             mac_stub = "ext_cff_mss_ncl"
+        elif name == "ga":
+            mac_stub = "ext_xsc"
         else:
             mac_stub = "ext_cff_mss"
 
@@ -293,6 +295,8 @@ class ModelConfig:
         self.dir_base = str(os.getcwd() + "/")
         self.dir_wvl = inputs["PATHS"]["WVL"]
         self.sphere_ice_path = inputs["PATHS"]["SPHERE_ICE"]
+        self.fn_ice = inputs["PATHS"]["FN_ICE"]
+        self.fn_water = inputs["PATHS"]["FN_WATER"]
         self.hex_ice_path = inputs["PATHS"]["HEX_ICE"]
         self.bubbly_ice_path = inputs["PATHS"]["BUBBLY_ICE"]
         self.ri_ice_path = inputs["PATHS"]["RI_ICE"]
