@@ -4,42 +4,46 @@ build-backend = "flit.buildapi"
 
 [project]
 name = "biosnicar"
-authors = [{ name = "XXX", email = "YYYY" }]
+authors = [{ name = "BioSNICAR team", email = "biosnicar@proton.me" }]
 description = "Snow and ice albedo modelling"
 readme = "README.md"
-requires-python = ">=3.8.1"
+requires-python = ">=3.8"
 dynamic = ["version"]
 
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
     "Intended Audience :: Developers",
     "Intended Audience :: Education",
+    "Intended Audience :: Other Audience",
     "Intended Audience :: Science/Research",
+    "Development Status :: 3 - Alpha",
+    "Natural Language :: English",
+    "Topic :: Scientific/Engineering",
     "Topic :: Scientific/Engineering :: Physics",
-    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Hydrology",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+    "Topic :: Utilities",
     "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
 
 dependencies = [
-    "python-dotenv",
-    "streamlit",
-    "pandas",
-    "dask[complete]",
+    "numpy",
+    "dask",
+    "click==8",
     "matplotlib",
     "miepython",
-    "netCDF4",
+    "pandas",
     "scipy",
     "seaborn",
     "xarray",
     "plotnine",
     "statsmodels",
-
-    "tqdm",
-    "pyyaml",
-    "plotly",
 ]
 
 [project.optional-dependencies]
@@ -60,6 +64,6 @@ test = [
 dev = ["bump2version"]
 
 [project.urls]
-Documentation = "https://github.com/jmcook1186/biosnicar-py"
+Documentation = "https://biosnicar-go-py.readthedocs.io/en/latest/"
 Source = "https://github.com/jmcook1186/biosnicar-py"
 Tracker = "https://github.com/jmcook1186/biosnicar-py/issues"
