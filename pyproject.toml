@@ -50,6 +50,7 @@ dependencies = [
 test = [
     "bandit[toml]",
     "ruff",
+    "black",
     "pylint",
     "pylint_junit",
     "pytest-cov",
@@ -88,6 +89,6 @@ replace = "{new_version}"
 filename = "biosnicar/__init__.py"
 
 [[tool.bumpversion.files]]
-filename = "CHANGELOG.md"
+filename = "CHANGELOG.rst"
 search = "Unreleased"
 replace = "{new_version}"
