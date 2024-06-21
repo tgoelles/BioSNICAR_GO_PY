@@ -35,7 +35,7 @@ classifiers = [
 dependencies = [
     "numpy",
     "dask",
-    "click==8",
+    "click",
     "matplotlib",
     "miepython",
     "pandas",
@@ -52,7 +52,7 @@ test = [
     "ruff",
     "pylint",
     "pylint_junit",
-    "pytest-cov=",
+    "pytest-cov",
     "pytest",
     "pytest-check",
     "coverage-badge",
@@ -67,3 +67,27 @@ dev = ["bump2version"]
 Documentation = "https://biosnicar-go-py.readthedocs.io/en/latest/"
 Source = "https://github.com/jmcook1186/biosnicar-py"
 Tracker = "https://github.com/jmcook1186/biosnicar-py/issues"
+
+[tool.flit.module]
+name = "biosnicar"
+
+
+[tool.bumpversion]
+allow_dirty = false
+commit = true
+tag = true
+current_version = "2.1.0"
+message = "Bump version: {current_version} → {new_version}"
+sign_tags = false
+tag_name = "v{new_version}"
+tag_message = "Bump version: {current_version} → {new_version}"
+search = "{current_version}"
+replace = "{new_version}"
+
+[[tool.bumpversion.files]]
+filename = "biosnicar/__init__.py"
+
+[[tool.bumpversion.files]]
+filename = "CHANGELOG.md"
+search = "Unreleased"
+replace = "{new_version}"
